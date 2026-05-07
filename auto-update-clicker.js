@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Octobox Auto-Update Clicker
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Clicks the update button on Octobox every interval when the tab is inactive
 // @author       Your Name
 // @match        https://octobox.io/*

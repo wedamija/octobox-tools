@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Octobox Resizable Thread Pane
 // @namespace    https://octobox.io
-// @version      2.0
+// @version      2.1
 // @description  Hide thread pane by default, show on notification select, drag to resize, close button to hide
 // @match        https://octobox.io/*
 // @grant        GM_addStyle
