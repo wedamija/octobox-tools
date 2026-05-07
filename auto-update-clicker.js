@@ -6,8 +6,8 @@
 // @author       Your Name
 // @match        https://octobox.io/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/wedamija/octobox-tools/main/auto-update-clicker.js
-// @downloadURL  https://raw.githubusercontent.com/wedamija/octobox-tools/main/auto-update-clicker.js
+// @updateURL    https://cdn.jsdelivr.net/gh/wedamija/octobox-tools@main/auto-update-clicker.js
+// @downloadURL  https://cdn.jsdelivr.net/gh/wedamija/octobox-tools@main/auto-update-clicker.js
 // ==/UserScript==
 // NOTE: In Firefox, Tampermonkey requires "Allow user scripts" to be enabled
 // in the extension's permissions (about:addons → Tampermonkey → Permissions).
