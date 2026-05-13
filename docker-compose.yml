@@ -1,0 +1,36 @@
+services:
+  web:
+    image: octoboxio/octobox
+    ports:
+      - "3000:3000"
+    env_file: .env
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  worker:
+    image: octoboxio/octobox
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    env_file: .env
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: octobox
+      POSTGRES_PASSWORD: octobox
+      POSTGRES_DB: octobox
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+
+volumes:
+  pgdata:

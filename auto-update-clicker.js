@@ -5,6 +5,7 @@
 // @description  Clicks the update button on Octobox every interval when the tab is inactive
 // @author       Your Name
 // @match        https://octobox.io/*
+// @match        http://localhost:3000/*
 // @grant        none
 // @updateURL    https://cdn.jsdelivr.net/gh/wedamija/octobox-tools@main/auto-update-clicker.js
 // @downloadURL  https://cdn.jsdelivr.net/gh/wedamija/octobox-tools@main/auto-update-clicker.js

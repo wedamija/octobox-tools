@@ -4,6 +4,7 @@
 // @version      2.3
 // @description  Hide thread pane by default, show on notification select, drag to resize, close button to hide
 // @match        https://octobox.io/*
+// @match        http://localhost:3000/*
 // @grant        GM_addStyle
 // @updateURL    https://cdn.jsdelivr.net/gh/wedamija/octobox-tools@main/ui-improvements.js
 // @downloadURL  https://cdn.jsdelivr.net/gh/wedamija/octobox-tools@main/ui-improvements.js
