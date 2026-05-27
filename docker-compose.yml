@@ -1,18 +1,30 @@
 services:
   web:
-    image: octoboxio/octobox
+    build: .
+    image: wedamija/octobox
     ports:
       - "3000:3000"
     env_file: .env
+    environment:
+      PUMA_WORKER_KILLER_RAM: "1024"
+      WEB_CONCURRENCY: "0"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
     depends_on:
       - postgres
       - redis
     restart: unless-stopped
 
   worker:
-    image: octoboxio/octobox
+    image: wedamija/octobox
     command: bundle exec sidekiq -C config/sidekiq.yml
     env_file: .env
+    environment:
+      OCTOBOX_SIDEKIQ_SCHEDULE_ENABLED: "true"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
     depends_on:
       - postgres
       - redis
