@@ -1,6 +1,9 @@
 services:
   web:
-    build: .
+    # Built from the upstream source checkout, not from octoboxio/octobox on
+    # Docker Hub (that image has not been rebuilt since 2026-01).
+    build:
+      context: ../octobox
     image: wedamija/octobox
     ports:
       - "3000:3000"
